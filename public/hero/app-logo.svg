@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Union" filter="url(#filter0_i_0_4400)">
+<path d="M20.8929 0C23.6253 3.47719e-07 25.8568 2.14578 25.9937 4.84417C25.9981 4.93126 26 5.01895 26 5.10714V20.8929C26 23.7135 23.7135 26 20.8929 26C18.7886 26 16.9823 24.7271 16.2001 22.9096C14.5 24.8058 12.0329 26 9.28571 26C4.15736 26 0 21.8426 0 16.7143C0 13.9671 1.19336 11.4991 3.08949 9.79897C1.27255 9.01657 0 7.21096 0 5.10714C0 2.28655 2.28655 0 5.10714 0H20.8929Z" fill="url(#paint0_radial_0_4400)"/>
+</g>
+<defs>
+<filter id="filter0_i_0_4400" x="0" y="-1" width="27" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1" dy="-1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.339844 0 0 0 0 0.845964 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_4400"/>
+</filter>
+<radialGradient id="paint0_radial_0_4400" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.6071 1.85714) rotate(136.219) scale(30.8671)">
+<stop stop-color="#FBF666"/>
+<stop offset="0.530635" stop-color="#F96B9D"/>
+<stop offset="1" stop-color="#0744F6"/>
+</radialGradient>
+</defs>
+</svg>

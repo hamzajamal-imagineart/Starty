@@ -1,0 +1,365 @@
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+#kit-footer, #kit-footer {
+  --color-white: #fff;
+  --spacing: 0.25rem;
+  --font-weight-semibold: 600;
+  --radius-lg: 0.5rem;
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#kit-footer .m-0 {
+  margin: 0px;
+}
+#kit-footer .mx-auto {
+  margin-inline: auto;
+}
+#kit-footer .mb-1 {
+  margin-bottom: var(--spacing);
+}
+#kit-footer .mb-5 {
+  margin-bottom: calc(var(--spacing) * 5);
+}
+#kit-footer .block {
+  display: block;
+}
+#kit-footer .flex {
+  display: flex;
+}
+#kit-footer .grid {
+  display: grid;
+}
+#kit-footer .inline-flex {
+  display: inline-flex;
+}
+#kit-footer .h-3\.5 {
+  height: calc(var(--spacing) * 3.5);
+}
+#kit-footer .h-\[15px\] {
+  height: 15px;
+}
+#kit-footer .h-\[34px\] {
+  height: 34px;
+}
+#kit-footer .w-3\.5 {
+  width: calc(var(--spacing) * 3.5);
+}
+#kit-footer .w-\[15px\] {
+  width: 15px;
+}
+#kit-footer .w-\[34px\] {
+  width: 34px;
+}
+#kit-footer .w-full {
+  width: 100%;
+}
+#kit-footer .max-w-\[1240px\] {
+  max-width: 1240px;
+}
+#kit-footer .min-w-0 {
+  min-width: 0px;
+}
+#kit-footer .flex-1 {
+  flex: 1;
+}
+#kit-footer .shrink-0 {
+  flex-shrink: 0;
+}
+#kit-footer .cursor-pointer {
+  cursor: pointer;
+}
+#kit-footer .list-none {
+  list-style-type: none;
+}
+#kit-footer .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#kit-footer .flex-col {
+  flex-direction: column;
+}
+#kit-footer .flex-wrap {
+  flex-wrap: wrap;
+}
+#kit-footer .items-center {
+  align-items: center;
+}
+#kit-footer .items-start {
+  align-items: flex-start;
+}
+#kit-footer .justify-between {
+  justify-content: space-between;
+}
+#kit-footer .justify-center {
+  justify-content: center;
+}
+#kit-footer .justify-start {
+  justify-content: flex-start;
+}
+#kit-footer .gap-0\.5 {
+  gap: calc(var(--spacing) * 0.5);
+}
+#kit-footer .gap-2 {
+  gap: calc(var(--spacing) * 2);
+}
+#kit-footer .gap-3 {
+  gap: calc(var(--spacing) * 3);
+}
+#kit-footer .gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+#kit-footer .gap-6 {
+  gap: calc(var(--spacing) * 6);
+}
+#kit-footer .gap-8 {
+  gap: calc(var(--spacing) * 8);
+}
+#kit-footer .gap-\[7px\] {
+  gap: 7px;
+}
+#kit-footer .gap-x-6 {
+  column-gap: calc(var(--spacing) * 6);
+}
+#kit-footer .gap-y-10 {
+  row-gap: calc(var(--spacing) * 10);
+}
+#kit-footer .overflow-x-hidden {
+  overflow-x: hidden;
+}
+#kit-footer .rounded-\[9px\] {
+  border-radius: 9px;
+}
+#kit-footer .rounded-lg {
+  border-radius: var(--radius-lg);
+}
+#kit-footer .border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+#kit-footer .border-t {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+#kit-footer .border-none {
+  --tw-border-style: none;
+  border-style: none;
+}
+#kit-footer .border-white\/10 {
+  border-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+}
+#kit-footer .border-white\/\[0\.06\] {
+  border-color: color-mix(in srgb, #fff 6%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 6%, transparent);
+  }
+}
+#kit-footer .bg-\[\#070707\] {
+  background-color: #070707;
+}
+#kit-footer .bg-transparent {
+  background-color: transparent;
+}
+#kit-footer .p-0 {
+  padding: 0px;
+}
+#kit-footer .px-3 {
+  padding-inline: calc(var(--spacing) * 3);
+}
+#kit-footer .px-5 {
+  padding-inline: calc(var(--spacing) * 5);
+}
+#kit-footer .py-\[7px\] {
+  padding-block: 7px;
+}
+#kit-footer .pt-5 {
+  padding-top: calc(var(--spacing) * 5);
+}
+#kit-footer .pt-10 {
+  padding-top: calc(var(--spacing) * 10);
+}
+#kit-footer .pb-2 {
+  padding-bottom: calc(var(--spacing) * 2);
+}
+#kit-footer .pb-6 {
+  padding-bottom: calc(var(--spacing) * 6);
+}
+#kit-footer .pb-8 {
+  padding-bottom: calc(var(--spacing) * 8);
+}
+#kit-footer .text-\[11\.5px\] {
+  font-size: 11.5px;
+}
+#kit-footer .text-\[11px\] {
+  font-size: 11px;
+}
+#kit-footer .text-\[12px\] {
+  font-size: 12px;
+}
+#kit-footer .text-\[13px\] {
+  font-size: 13px;
+}
+#kit-footer .leading-\[1\.4\] {
+  --tw-leading: 1.4;
+  line-height: 1.4;
+}
+#kit-footer .font-semibold {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+#kit-footer .tracking-\[0\.5px\] {
+  --tw-tracking: 0.5px;
+  letter-spacing: 0.5px;
+}
+#kit-footer .text-white\/25 {
+  color: color-mix(in srgb, #fff 25%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-white) 25%, transparent);
+  }
+}
+#kit-footer .text-white\/35 {
+  color: color-mix(in srgb, #fff 35%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-white) 35%, transparent);
+  }
+}
+#kit-footer .text-white\/55 {
+  color: color-mix(in srgb, #fff 55%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-white) 55%, transparent);
+  }
+}
+#kit-footer .text-white\/60 {
+  color: color-mix(in srgb, #fff 60%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-white) 60%, transparent);
+  }
+}
+#kit-footer .text-white\/\[0\.38\] {
+  color: color-mix(in srgb, #fff 38%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-white) 38%, transparent);
+  }
+}
+#kit-footer .no-underline {
+  text-decoration-line: none;
+}
+#kit-footer .transition-colors {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+@media (hover: hover) {
+  #kit-footer .hover\:border-white\/\[0\.28\]:hover {
+    border-color: color-mix(in srgb, #fff 28.000000000000004%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    #kit-footer .hover\:border-white\/\[0\.28\]:hover {
+      border-color: color-mix(in oklab, var(--color-white) 28.000000000000004%, transparent);
+    }
+  }
+  #kit-footer .hover\:bg-white\/\[0\.06\]:hover {
+    background-color: color-mix(in srgb, #fff 6%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    #kit-footer .hover\:bg-white\/\[0\.06\]:hover {
+      background-color: color-mix(in oklab, var(--color-white) 6%, transparent);
+    }
+  }
+  #kit-footer .hover\:text-white:hover {
+    color: var(--color-white);
+  }
+  #kit-footer .hover\:text-white\/55:hover {
+    color: color-mix(in srgb, #fff 55%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    #kit-footer .hover\:text-white\/55:hover {
+      color: color-mix(in oklab, var(--color-white) 55%, transparent);
+    }
+  }
+  #kit-footer .hover\:text-white\/80:hover {
+    color: color-mix(in srgb, #fff 80%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    #kit-footer .hover\:text-white\/80:hover {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  #kit-footer .hover\:text-white\/90:hover {
+    color: color-mix(in srgb, #fff 90%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    #kit-footer .hover\:text-white\/90:hover {
+      color: color-mix(in oklab, var(--color-white) 90%, transparent);
+    }
+  }
+}
+@media (width >= 40rem) {
+  #kit-footer .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  #kit-footer .sm\:flex-row {
+    flex-direction: row;
+  }
+  #kit-footer .sm\:items-center {
+    align-items: center;
+  }
+  #kit-footer .sm\:justify-between {
+    justify-content: space-between;
+  }
+}
+@media (width >= 48rem) {
+  #kit-footer .md\:w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  #kit-footer .md\:flex-row {
+    flex-direction: row;
+  }
+  #kit-footer .md\:gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  #kit-footer .md\:px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  #kit-footer .md\:pt-14 {
+    padding-top: calc(var(--spacing) * 14);
+  }
+  #kit-footer .md\:pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
+  }
+}
+@media (width >= 64rem) {
+  #kit-footer .lg\:grid-cols-\[repeat\(5\,auto\)\] {
+    grid-template-columns: repeat(5,auto);
+  }
+}
+@media (width >= 80rem) {
+  #kit-footer .xl\:grid-cols-\[repeat\(6\,auto\)\] {
+    grid-template-columns: repeat(6,auto);
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    #kit-footer *, #kit-footer ::before, #kit-footer ::after, #kit-footer ::backdrop {
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+    }
+  }

@@ -1,0 +1,212 @@
+/* Starty additions on top of the ported stylesheet. */
+:root {
+  --font-sans: Gellix, ui-sans-serif, system-ui, sans-serif;
+  --starty-blue: #0088ff;
+  --starty-deep: #0049a0;
+  --starty-pink: #f0abd5;
+  --starty-orange: #fa8e59;
+}
+
+/* The compiled stylesheet's dark selection colour is purple; use brand blue. */
+::selection {
+  background: rgba(0, 136, 255, 0.18);
+}
+
+/* ─── Hero showcase: demo video placeholder ──────────────────────
+   16:9 frame in the same glass treatment the app frame used. Swap the
+   placeholder for the <video> once the demo exists (see scripts/hero-app.html).
+────────────────────────────────────────────────────────────────── */
+.sh-video-wrap { width: 100%; display: flex; justify-content: center; font-family: var(--font-sans); }
+.sh-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: 6px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(26, 24, 43, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 73, 160, 0.14), 0 2px 6px rgba(26, 24, 43, 0.06);
+  overflow: hidden;
+}
+.sh-video-el,
+.sh-video-placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  background: #0f0f0f;
+}
+.sh-video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  color: #fff;
+  background:
+    radial-gradient(70% 60% at 50% 110%, rgba(250, 142, 89, 0.55) 0%, rgba(250, 142, 89, 0) 70%),
+    radial-gradient(90% 70% at 20% 100%, rgba(240, 171, 213, 0.45) 0%, rgba(240, 171, 213, 0) 70%),
+    radial-gradient(120% 90% at 80% 0%, #0088ff 0%, #0049a0 55%, #0a2a5c 100%);
+}
+.sh-play {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f0f0f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.sh-play svg { width: 30px; height: 30px; margin-left: 3px; }
+.sh-video-title { font: 500 clamp(18px, 1.6vw, 22px)/1.3 var(--font-sans); letter-spacing: -0.01em; }
+.sh-video-note { font: 400 14px/20px var(--font-sans); letter-spacing: 0.2px; color: rgba(255, 255, 255, 0.7); }
+@media (max-width: 640px) {
+  .sh-video { border-radius: 18px; padding: 4px; }
+  .sh-video-el, .sh-video-placeholder { border-radius: 14px; }
+  .sh-play { width: 56px; height: 56px; }
+}
+
+/* ─── Hero background: smoother beige → peach → pink → blue → deep blue.
+   The compiled stylesheet packed all its colour stops into the last 30% of the
+   radial gradient and jumped from pink straight to sky blue; this spreads the
+   ramp out and adds lavender steps between pink and blue. Same geometry and
+   endpoints as the original, so the section edges still line up. ─── */
+.gradient-home-hero-light { background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1444 919' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-6.073e-14 81.917 -200.81 -0.0075087 751.71 99.832)'><stop stop-color='%23faf5f1' offset='0'/><stop stop-color='%23faf5f1' offset='0.4'/><stop stop-color='%23fcefe6' offset='0.48'/><stop stop-color='%23fbdccb' offset='0.55'/><stop stop-color='%23f7c4cf' offset='0.61'/><stop stop-color='%23ebb6dd' offset='0.66'/><stop stop-color='%23d0b9ee' offset='0.71'/><stop stop-color='%23a9c1f9' offset='0.76'/><stop stop-color='%2374b3ff' offset='0.81'/><stop stop-color='%233d9dff' offset='0.85'/><stop stop-color='%231a82ea' offset='0.89'/><stop stop-color='%230d63c2' offset='0.93'/><stop stop-color='%230552ab' offset='0.965'/><stop stop-color='%230049a0' offset='1'/></radialGradient></defs></svg>") !important; }
+
+/* ─── Closing CTA → footer glow (the original faded the deep band through a
+   violet/peach glow into the footer; recreated with the Starty palette) ─── */
+#pricing > div {
+  background:
+    linear-gradient(to bottom, rgba(7,7,7,0) 86%, #070707 100%),
+    radial-gradient(60% 30% at 50% 94%, #fa8e59 0%, rgba(250,142,89,0) 100%),
+    radial-gradient(105% 46% at 50% 96%, #f0abd5 0%, rgba(240,171,213,0) 100%),
+    radial-gradient(150% 72% at 50% 100%, #58aaff 0%, rgba(88,170,255,0) 100%),
+    #0049a0 !important;
+  padding-bottom: 360px !important;
+}
+@media (max-width: 640px) { #pricing > div { padding-bottom: 160px !important; } }
+
+/* ═══════════════════════════════════════════════════════════════
+   Landing-page kit adoption (guidelines-for-landing-page)
+   Everything except the heading face: body typography, weights,
+   text colours, 1240px container with 32px gutters, section guides.
+   Headings use Google Sans Flex too (kit rule: one typeface).
+   ═══════════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url("/fonts/google-sans-flex.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --font-sans: "Google Sans Flex", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-content-primary: #171717;
+  --color-heading-muted: #6e6e73;
+  --primitive-main-dark: #171717;             /* near-black from the kit */
+}
+html, body, .font-sans { font-family: var(--font-sans); }
+.font-heading { font-family: var(--font-sans); }   /* headings in Google Sans Flex per the kit */
+
+/* Weight cap: 600 max, never 700+ (headings excepted: the heading face itself is bold) */
+body :not(.font-heading):not(h1):not(h2):not(h3) { --kit-weight-cap: 600; }
+.font-bold:not(.font-heading) { font-weight: 600; }
+strong, b { font-weight: 600; }
+
+/* Kit text colours on light surfaces */
+.light .text-secondary, .light .body-main.text-secondary { color: rgb(87, 87, 87); }
+.light .body-small.text-secondary { color: rgb(100, 100, 100); }
+
+/* Container: 1240px, 32px gutters (20px under 768px) */
+[class~="max-w-[90rem]"], [class~="max-w-[1280px]"] { max-width: 1240px !important; }
+[class~="max-w-[90rem]"][class*="px-"],
+[class*="px-"]:has(> [class~="max-w-[90rem]"]) {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+@media (max-width: 768px) {
+  [class~="max-w-[90rem]"][class*="px-"],
+  [class*="px-"]:has(> [class~="max-w-[90rem]"]) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+
+/* Body and subcopy weight: 400 (kit). Headings, buttons, nav, labels and the
+   Slack-mockup sender names are untouched. */
+.body-main, .body-medium, .body-small, .body-large, .body-tiny,
+p:not(.font-heading):not(.sh-group-title):not(.sh-placeholder),
+p:not(.font-heading) > span:not(.font-heading),
+blockquote:not(.font-heading), li:not(.sa-menu li) { font-weight: 400; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Kit typography scale + text colours (GUIDELINES.md §3)
+   Sizes, tracking, leading, weights and colours follow the kit; the
+   heading accent colour stays Starty blue (client preference).
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --kit-content: #171717;
+  --kit-body: rgb(100, 100, 100);
+  --kit-intro: rgb(87, 87, 87);
+  --kit-muted: #6e6e73;
+}
+
+/* Headings: font-medium, tracking -0.5px, line-height 1.1 */
+.font-heading, .light .font-heading, .light .text-primary.font-heading {
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  color: var(--kit-content);
+}
+.dark .font-heading, [data-theme="dark"] .font-heading { color: #fff; }
+
+/* Hero h1 */
+#hero h1.font-heading { font-size: clamp(34px, 4.4vw, 54px) !important; letter-spacing: -0.03em; line-height: 1.08; }
+/* Section h2 (the page marks section titles as h2.font-heading.h3) */
+h2.font-heading.h3, h2.font-heading.h2, p.font-heading.h2 { font-size: clamp(28px, 3.6vw, 44px) !important; line-height: 1.1 !important; }
+/* FAQ h2 */
+#faq h2.font-heading { font-size: clamp(36px, 4vw, 52px) !important; }
+/* Closing CTA h2 */
+#pricing h2.font-heading { font-size: clamp(32px, 4.4vw, 56px) !important; letter-spacing: -1px; }
+/* Card / tile h3 and step titles */
+h3.font-heading { font-size: clamp(19px, 1.5vw, 22px) !important; line-height: 1.1 !important; letter-spacing: -0.5px !important; }
+h5.font-heading, .font-heading.h5 { font-size: clamp(20px, 1.7vw, 25px) !important; line-height: 1.1 !important; letter-spacing: -0.5px !important; }
+/* Section intro paragraphs: 17px / 1.7, 58ch, rgb(87,87,87) */
+#hero p.text-secondary, #hero p.text-secondary span,
+.light .body-main.text-secondary, .light p.body-large {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  color: var(--kit-intro) !important;
+  max-width: 58ch;
+}
+/* Card body: 14.5px / 1.65, rgb(100,100,100) */
+.light .body-small, .light .body-small.text-secondary, .light .body-tiny {
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  color: var(--kit-body) !important;
+}
+/* Primary text on light surfaces */
+.light .text-primary:not(.font-heading) { color: var(--kit-content); }
+
+/* Eyebrows: mono, 11px, 600, uppercase, 0.18em */
+[data-slot="badge"] {
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, monospace) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase;
+  color: var(--kit-muted) !important;
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  height: auto !important;
+  padding: 4px 10px !important;
+}
+.dark [data-slot="badge"], [data-theme="dark"] [data-slot="badge"] { color: rgba(255,255,255,0.7) !important; border-color: rgba(255,255,255,0.2) !important; }
+/* Closing CTA heading is a div.font-heading, not an h2 */
+#pricing .font-heading[class*="text-[32px]"] { font-size: clamp(32px, 4.4vw, 56px) !important; letter-spacing: -1px !important; line-height: 1.1 !important; }
