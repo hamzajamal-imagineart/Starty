@@ -88,7 +88,7 @@
   border-radius: 40px !important;
 }
 #pricing { padding-bottom: 96px; }
-#kit-footer { padding-top: 40px; }
+#kit-footer { padding-top: 40px !important; }
 @media (max-width: 640px) {
   #pricing > div { padding-top: 72px !important; padding-bottom: 72px !important; border-radius: 24px !important; }
   #pricing { padding-bottom: 56px; }

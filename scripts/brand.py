@@ -298,6 +298,25 @@ def drop_hero_ctas(body):
     end = _balanced_div_end(body, start)
     return body[:start] + body[end:] if start >= 0 and end else body
 
+def drop_g2(body):
+    """Remove every G2 rating badge (stars + '4.9 on G2') and the 'Users love … on G2'
+    image in the testimonials header (owner request)."""
+    while True:
+        m = re.search(r'G2 rating: 4\.9 out of 5 stars</span></div>', body)
+        if not m:
+            break
+        end = m.end(); depth = 0; start = None
+        for mm in reversed(list(re.finditer(r'<div\b|</div>', body[:end]))):
+            depth += 1 if mm.group(0) == '</div>' else -1
+            if depth == 0:
+                start = mm.start(); break
+        if start is None:
+            break
+        body = body[:start] + body[end:]
+    body = re.sub(r'<a [^>]*>\s*</a>', '', body)
+    body = re.sub(r'<div class="\[&amp;_img\]:h-\[105px\][^"]*"><a title="Users love[^"]*".*?</a></div>', '', body, count=1, flags=re.S)
+    return body
+
 def replace_showcase(body):
     """Swap the Slack showcase inside the hero for the Starty app UI (scripts/hero-app.html)."""
     app = _read_snippet('hero-app.html')
@@ -342,6 +361,7 @@ def main():
     body = add_anchors(body)
     body = replace_showcase(body)
     body = drop_hero_ctas(body)
+    body = drop_g2(body)
     body = recolor(rebrand_words(body))
     body = drop_brand_links(body)
     body = retagline(body)
